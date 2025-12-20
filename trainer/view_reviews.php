@@ -39,7 +39,7 @@ $reviews_result = mysqli_query($conn, $reviews_query);
 }
 
 body {
-    background: #f4f7fa;
+    background: var(--bgcolor);
     color: #333;
 }
 
@@ -47,7 +47,7 @@ body {
    Header
 ------------------------------- */
 header {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -73,7 +73,7 @@ header {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 20px;
 }
 
@@ -94,7 +94,7 @@ table td {
 }
 
 table th {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
 }
 
@@ -109,7 +109,7 @@ table tr:nth-child(even) {
     display: inline-block;
     margin-bottom: 15px;
     padding: 8px 15px;
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

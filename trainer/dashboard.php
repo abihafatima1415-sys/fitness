@@ -29,7 +29,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
     <title>Trainer Dashboard | Fitness Management System</title>
     <style>
         /* =====================================================
-           GLOBAL STYLE - (Single Theme Color: #00c8b3)
+           GLOBAL STYLE - (Single Theme Color: var(--primary-color);)
         ====================================================== */
         * {
             margin: 0;
@@ -39,12 +39,12 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         body {
-            background-color: #f4f7fa;
+            background-color: var(--bgcolor);
             color: #333;
         }
 
         header {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -61,7 +61,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         h2 {
-            color: #00c8b3;
+            color: var(--primary-color);;
             text-align: center;
             margin-bottom: 30px;
         }
@@ -88,7 +88,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
 
         .card h3 {
             margin-top: 10px;
-            color: #00c8b3;
+            color: var(--primary-color);;
         }
 
         .card p {
@@ -99,7 +99,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
 
         .btn {
             display: inline-block;
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             padding: 10px 18px;
             border-radius: 6px;
@@ -124,7 +124,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         footer {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             text-align: center;
             padding: 15px 0;

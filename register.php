@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         body {
-            background-color: #f4f7fa; /* Light background for clean look */
+            background-color: var(--bgcolor); /* Light background for clean look */
             color: #333;
         }
 
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         h2 {
             text-align: center;
-            color: #00c8b3;
+            color: var(--primary-color);;
             margin-bottom: 25px;
         }
 
@@ -88,12 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         input:focus, select:focus {
-            border-color: #00c8b3;
+            border-color: var(--primary-color);;
             outline: none;
         }
 
         button {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: white;
             border: none;
             padding: 12px;
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         a {
-            color: #00c8b3;
+            color: var(--primary-color);;
             text-decoration: none;
         }
 

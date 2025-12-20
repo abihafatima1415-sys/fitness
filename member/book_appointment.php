@@ -41,7 +41,7 @@ $trainers = mysqli_query($conn, "SELECT id, full_name, shift FROM trainers");
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f7fa;
+            background-color: var(--bgcolor);
             color: #333;
             margin: 0;
         }
@@ -55,7 +55,7 @@ $trainers = mysqli_query($conn, "SELECT id, full_name, shift FROM trainers");
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         h2 {
-            color: #00c8b3;
+            color: var(--primary-color);;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -76,11 +76,11 @@ $trainers = mysqli_query($conn, "SELECT id, full_name, shift FROM trainers");
             transition: border-color 0.3s;
         }
         select:focus, input:focus {
-            border-color: #00c8b3;
+            border-color: var(--primary-color);;
             outline: none;
         }
         button {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: white;
             border: none;
             padding: 12px;
@@ -108,7 +108,7 @@ $trainers = mysqli_query($conn, "SELECT id, full_name, shift FROM trainers");
             border-bottom: 1px solid #ccc;
         }
         th {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: white;
         }
         .status {
@@ -122,7 +122,7 @@ $trainers = mysqli_query($conn, "SELECT id, full_name, shift FROM trainers");
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #00c8b3;
+            color: var(--primary-color);;
             text-decoration: none;
         }
         a:hover {

@@ -72,7 +72,7 @@ $dates_result = mysqli_query($conn, "SELECT DISTINCT attendance_date FROM attend
 }
 
 body {
-    background: #f4f7fa;
+    background: var(--bgcolor);
     color: #333;
 }
 
@@ -80,7 +80,7 @@ body {
    Header
 ------------------------------- */
 header {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -106,7 +106,7 @@ header {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 25px;
 }
 
@@ -136,7 +136,7 @@ select {
    Buttons
 ------------------------------- */
 button {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     border: none;
     padding: 12px;
@@ -183,7 +183,7 @@ table td {
 }
 
 table th {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
 }
 
@@ -202,7 +202,7 @@ table tr:nth-child(even) {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

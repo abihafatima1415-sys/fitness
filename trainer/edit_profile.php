@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f4f7fa;
+    background: var(--bgcolor);
     margin: 0;
     color: #333;
 }
@@ -69,7 +69,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 20px;
 }
 
@@ -102,7 +102,7 @@ input[readonly] {
    Buttons
 ------------------------------- */
 button {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     border: none;
     padding: 12px;

@@ -99,7 +99,7 @@ $members_result = mysqli_query($conn, "SELECT id, full_name FROM members ORDER B
 }
 
 body {
-    background: #f4f7fa;
+    background: var(--bgcolor);
     color: #333;
 }
 
@@ -121,7 +121,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 25px;
 }
 
@@ -150,7 +150,7 @@ table td {
 }
 
 table th {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
 }
 
@@ -172,7 +172,7 @@ table tr:nth-child(even) {
 }
 
 .edit-btn {
-    background: #00c8b3;
+    background: var(--primary-color);;
 }
 
 .delete-btn {
@@ -209,12 +209,12 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #00c8b3;
+    border-color: var(--primary-color);;
     outline: none;
 }
 
 button {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     border: none;
     padding: 12px;
@@ -251,7 +251,7 @@ a.cancel:hover {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

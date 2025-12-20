@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 body {
-    background-color: #f4f7fa;
+    background-color: var(--bgcolor);
     color: #333;
 }
 
@@ -106,7 +106,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 25px;
 }
 
@@ -135,7 +135,7 @@ select {
 
 input:focus,
 select:focus {
-    border-color: #00c8b3;
+    border-color: var(--primary-color);;
     outline: none;
 }
 
@@ -143,7 +143,7 @@ select:focus {
    Buttons
 ------------------------------- */
 button {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: white;
     border: none;
     padding: 12px;
@@ -167,7 +167,7 @@ p {
 }
 
 a {
-    color: #00c8b3;
+    color: var(--primary-color);;
     text-decoration: none;
 }
 
@@ -187,7 +187,7 @@ a:hover {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

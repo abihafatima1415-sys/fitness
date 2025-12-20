@@ -38,7 +38,7 @@ $result = mysqli_query($conn, $query);
 }
 
 body {
-    background: #f4f7fa;
+    background: var(--bgcolor);
     color: #333;
 }
 
@@ -46,7 +46,7 @@ body {
    Header
 ------------------------------- */
 header {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -72,7 +72,7 @@ header {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 25px;
 }
 
@@ -93,7 +93,7 @@ table td {
 }
 
 table th {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
 }
 
@@ -109,7 +109,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     text-align: center;
     padding: 12px 0;
@@ -128,7 +128,7 @@ footer {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

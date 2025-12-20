@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $query);
 ------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f4f7fa;
+    background: var(--bgcolor);
     margin: 0;
     color: #333;
 }
@@ -52,7 +52,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 20px;
 }
 
@@ -72,7 +72,7 @@ table td {
 }
 
 table th {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
 }
 
@@ -97,7 +97,7 @@ table tr:nth-child(even) {
    Links
 ------------------------------- */
 a {
-    color: #00c8b3;
+    color: var(--primary-color);;
     text-decoration: none;
 }
 

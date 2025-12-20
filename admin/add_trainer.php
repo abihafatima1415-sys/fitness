@@ -58,12 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         body {
-            background-color: #f4f7fa;
+            background-color: var(--bgcolor);
             color: #333;
         }
 
         header {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         h2 {
             text-align: center;
-            color: #00c8b3;
+            color: var(--primary-color);;
             margin-bottom: 20px;
         }
 
@@ -104,13 +104,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         form input:focus, form select:focus {
-            border-color: #00c8b3;
+            border-color: var(--primary-color);;
         }
 
         .btn-submit {
             width: 100%;
             padding: 10px;
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             border: none;
             border-radius: 6px;
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: block;
             text-align: center;
             text-decoration: none;
-            color: #00c8b3;
+            color: var(--primary-color);;
             margin-top: 10px;
         }
 
@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             text-align: center;
             padding: 12px 0;

@@ -45,7 +45,7 @@ $payments_result = mysqli_query($conn, $payments_query);
 ------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f4f7fa;
+    background: var(--bgcolor);
     margin: 0;
     color: #333;
 }
@@ -67,7 +67,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 25px;
 }
 
@@ -105,7 +105,7 @@ table td {
 }
 
 table th {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
 }
 
@@ -117,7 +117,7 @@ table tr:nth-child(even) {
    Buttons
 ------------------------------- */
 button {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -135,7 +135,7 @@ button:hover {
 ------------------------------- */
 a {
     text-decoration: none;
-    color: #00c8b3;
+    color: var(--primary-color);;
 }
 
 a:hover {

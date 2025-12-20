@@ -19,7 +19,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
     <title>Member Dashboard | Fitness Management System</title>
     <style>
         /* =====================================================
-           GLOBAL STYLE (Single Theme Color: #00c8b3)
+           GLOBAL STYLE (Single Theme Color: var(--primary-color);)
         ====================================================== */
         * {
             margin: 0;
@@ -29,12 +29,12 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         body {
-            background-color: #f4f7fa;
+            background-color: var(--bgcolor);
             color: #333;
         }
 
         header {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -68,7 +68,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         h2 {
-            color: #00c8b3;
+            color: var(--primary-color);;
             text-align: center;
             margin-bottom: 30px;
         }
@@ -95,7 +95,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
 
         .card h3 {
             margin-top: 10px;
-            color: #00c8b3;
+            color: var(--primary-color);;
         }
 
         .card p {
@@ -106,7 +106,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
 
         .btn {
             display: inline-block;
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             padding: 10px 18px;
             border-radius: 6px;
@@ -120,7 +120,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         footer {
-            background-color: #00c8b3;
+            background-color: var(--primary-color);;
             color: #fff;
             text-align: center;
             padding: 15px 0;

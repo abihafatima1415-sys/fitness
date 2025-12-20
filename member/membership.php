@@ -86,7 +86,7 @@ $memberships_result = mysqli_query($conn, "
 ------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f7fa;
+    background-color: var(--bgcolor);
     color: #333;
     margin: 0;
 }
@@ -109,7 +109,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 20px;
 }
 
@@ -130,7 +130,7 @@ table td {
 }
 
 table th {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: white;
 }
 
@@ -154,7 +154,7 @@ select {
    Buttons
 ------------------------------- */
 button {
-    background-color: #00c8b3;
+    background-color: var(--primary-color);;
     color: white;
     border: none;
     padding: 12px 18px;
@@ -189,7 +189,7 @@ button:hover {
    Links
 ------------------------------- */
 a {
-    color: #00c8b3;
+    color: var(--primary-color);;
     text-decoration: none;
 }
 

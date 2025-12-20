@@ -24,7 +24,7 @@ session_start();
         }
 
         body {
-            background-color: #f4f7fa; /* Light gray background for clean look */
+            background-color: var(--bgcolor); /* Light gray background for clean look */
             color: #333; /* Dark text for readability */
             line-height: 1.6; /* Comfortable line spacing */
         }
@@ -58,7 +58,7 @@ session_start();
         .logo {
             font-size: 26px; /* Larger font for logo */
             font-weight: 700; /* Bold logo text */
-            color: #00c8b3; /* Teal accent color */
+            color: var(--primary-color);; /* Teal accent color */
         }
 
         .nav-links {
@@ -74,14 +74,14 @@ session_start();
         }
 
         .nav-links a:hover {
-            color: #00c8b3; /* Teal hover effect */
+            color: var(--primary-color);; /* Teal hover effect */
         }
 
 /* ------------------------------
    HERO SECTION
 -------------------------------*/
 .hero {
-    background-color: #00c8b3; /* Solid teal background color */
+    background-color: var(--primary-color);; /* Solid teal background color */
     height: 90vh; /* Full viewport height */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
@@ -107,7 +107,7 @@ session_start();
 
 .hero-content a {
     background-color: #fff; /* White button */
-    color: #00c8b3; /* Teal button text */
+    color: var(--primary-color);; /* Teal button text */
     padding: 12px 30px; /* Button padding */
     border-radius: 30px; /* Rounded button corners */
     font-weight: 600; /* Bold button text */
@@ -144,7 +144,7 @@ session_start();
         }
 
         .feature-box h3 {
-            color: #00c8b3; /* Teal titles */
+            color: var(--primary-color);; /* Teal titles */
             margin-bottom: 10px; /* Space below title */
         }
 

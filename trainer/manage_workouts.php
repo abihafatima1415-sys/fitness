@@ -70,7 +70,7 @@ $workouts = mysqli_query($conn, "
 ------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f4f7fa;
+    background: var(--bgcolor);
     color: #333;
     margin: 0;
 }
@@ -93,7 +93,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: #00c8b3;
+    color: var(--primary-color);;
     margin-bottom: 20px;
 }
 
@@ -137,7 +137,7 @@ textarea {
 }
 
 button {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -165,7 +165,7 @@ td {
 }
 
 th {
-    background: #00c8b3;
+    background: var(--primary-color);;
     color: #fff;
 }
 
@@ -205,7 +205,7 @@ a.back {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: #00c8b3;
+    color: var(--primary-color);;
     text-decoration: none;
 }
 
