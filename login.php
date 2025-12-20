@@ -23,6 +23,9 @@ if (isset($_SESSION['user_role'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+    if(!isset($_POST['role'])) {
+         $_POST['role'] = 'Admin';
+    }
     $role = mysqli_real_escape_string($conn, $_POST['role']);
 
     // Select correct table based on role
@@ -212,13 +215,13 @@ a:hover {
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter password" required>
 
-            <label for="role">Select Role:</label>
+            <!-- <label for="role">Select Role:</label>
             <select id="role" name="role" required>
                 <option value="">-- Choose Role --</option>
                 <option value="Admin">Admin</option>
                 <option value="Member">Member</option>
                 <option value="Trainer">Trainer</option>
-            </select>
+            </select> -->
 
             <button type="submit">Login</button>
         </form>

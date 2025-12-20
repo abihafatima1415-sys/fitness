@@ -37,7 +37,7 @@ $admin_name = $_SESSION['user_name'];
 
         body {
             display: flex; /* Layout: Sidebar + Content */
-            background-color: #f5f7fa; /* Light background */
+            background-color: var(--bgcolor); /* Light background */
             color: #333; /* Readable dark text */
             min-height: 100vh; /* Full height */
         }

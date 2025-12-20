@@ -1,6 +1,6 @@
 :root {
   --primary-color: #336f68; /* change this to your brand color */
-  --bgcolor: rgb(223, 224, 230);
+  --bgcolor: #d6d8d9;
 }
 header a {
   color: white;
