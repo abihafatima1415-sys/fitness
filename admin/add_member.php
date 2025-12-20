@@ -53,7 +53,7 @@ if (isset($_POST['add_member'])) {
         }
 
         body {
-            background-color: var(--bgcolor);
+            background-color: #f4f7fa;
             color: #333;
         }
 
@@ -159,7 +159,7 @@ if (isset($_POST['add_member'])) {
 </head>
 <body>
 
-    <header>Add New Member</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Add New Member</header>
 
     <div class="container">
         <h2>Member Registration</h2>

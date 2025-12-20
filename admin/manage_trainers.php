@@ -159,7 +159,7 @@ $result = mysqli_query($conn, $query);
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header>Manage Trainers</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Manage Trainers</header>
 
     <!-- ================= CONTENT ================= -->
     <div class="container">

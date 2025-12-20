@@ -121,7 +121,7 @@ table tr:nth-child(even) {
 </head>
 <body>
 
-<header>All Trainer Reviews</header>
+<header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>All Trainer Reviews</header>
 
 <div class="container">
     <a href="dashboard.php" class="back-btn">Back to Dashboard</a>

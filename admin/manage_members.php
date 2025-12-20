@@ -156,7 +156,7 @@ $result = mysqli_query($conn, $query);
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header>Manage Members</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Manage Members</header>
 
     <!-- ================= CONTENT ================= -->
     <div class="container">

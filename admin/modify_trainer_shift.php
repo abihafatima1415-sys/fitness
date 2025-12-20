@@ -178,7 +178,7 @@ if (isset($_POST['update_shift'])) {
 </head>
 <body>
 
-<header>Modify Trainer Shift</header>
+<header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Modify Trainer Shift</header>
 
 <div class="container">
     <h2>Update Trainer Shift</h2>

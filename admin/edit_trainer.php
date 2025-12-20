@@ -175,7 +175,7 @@ if (isset($_POST['update'])) {
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header>Edit Trainer</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Edit Trainer</header>
 
     <!-- ================= CONTENT ================= -->
     <div class="container">

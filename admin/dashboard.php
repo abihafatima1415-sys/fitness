@@ -213,7 +213,7 @@ $admin_name = $_SESSION['user_name'];
     <!-- ===================== MAIN CONTENT ===================== -->
     <div class="main-content">
 
-        <header>
+        <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>
             <h1>Welcome, <?php echo htmlspecialchars($admin_name); ?></h1>
         </header>
 

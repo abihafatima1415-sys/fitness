@@ -161,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header>Add New Trainer</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Add New Trainer</header>
 
     <!-- ================= FORM SECTION ================= -->
     <div class="container">

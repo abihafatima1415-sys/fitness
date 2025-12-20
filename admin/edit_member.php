@@ -185,7 +185,7 @@ if (isset($_POST['update_member'])) {
 </head>
 <body>
 
-    <header>Edit Member</header>
+    <header><a href="<?php echo $base_url;?>/admin/dashboard.php">Dashboard</a>Edit Member</header>
 
     <div class="container">
         <h2>Update Member Information</h2>
