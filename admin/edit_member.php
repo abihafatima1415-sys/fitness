@@ -84,7 +84,7 @@ if (isset($_POST['update_member'])) {
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -104,7 +104,7 @@ if (isset($_POST['update_member'])) {
 
         h2 {
             text-align: center;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 20px;
         }
 
@@ -124,14 +124,14 @@ if (isset($_POST['update_member'])) {
         }
 
         form input:focus, form select:focus {
-            border-color: var(--primary-color);;
+            border-color: var(--primary-color);
             outline: none;
         }
 
         button {
             width: 100%;
             padding: 12px;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: white;
             border: none;
             border-radius: 6px;
@@ -148,7 +148,7 @@ if (isset($_POST['update_member'])) {
             display: block;
             text-align: center;
             margin-top: 15px;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
         }
@@ -162,7 +162,7 @@ if (isset($_POST['update_member'])) {
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 12px 0;

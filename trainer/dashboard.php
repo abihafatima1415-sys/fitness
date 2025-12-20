@@ -44,7 +44,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -61,7 +61,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         h2 {
-            color: var(--primary-color);;
+            color: var(--primary-color);
             text-align: center;
             margin-bottom: 30px;
         }
@@ -88,7 +88,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
 
         .card h3 {
             margin-top: 10px;
-            color: var(--primary-color);;
+            color: var(--primary-color);
         }
 
         .card p {
@@ -99,7 +99,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
 
         .btn {
             display: inline-block;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 10px 18px;
             border-radius: 6px;
@@ -124,7 +124,7 @@ $trainer_shift = $trainer_data['shift'] ?? 'Not Assigned';
         }
 
         footer {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 15px 0;

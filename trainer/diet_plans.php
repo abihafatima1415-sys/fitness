@@ -121,7 +121,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 25px;
 }
 
@@ -150,7 +150,7 @@ table td {
 }
 
 table th {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -172,7 +172,7 @@ table tr:nth-child(even) {
 }
 
 .edit-btn {
-    background: var(--primary-color);;
+    background: var(--primary-color);
 }
 
 .delete-btn {
@@ -209,12 +209,12 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--primary-color);;
+    border-color: var(--primary-color);
     outline: none;
 }
 
 button {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     padding: 12px;
@@ -251,7 +251,7 @@ a.cancel:hover {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

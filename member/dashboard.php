@@ -34,7 +34,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -68,7 +68,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         h2 {
-            color: var(--primary-color);;
+            color: var(--primary-color);
             text-align: center;
             margin-bottom: 30px;
         }
@@ -95,7 +95,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
 
         .card h3 {
             margin-top: 10px;
-            color: var(--primary-color);;
+            color: var(--primary-color);
         }
 
         .card p {
@@ -106,7 +106,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
 
         .btn {
             display: inline-block;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 10px 18px;
             border-radius: 6px;
@@ -120,7 +120,7 @@ $member_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Member'
         }
 
         footer {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 15px 0;

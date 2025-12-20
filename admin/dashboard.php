@@ -47,7 +47,7 @@ $admin_name = $_SESSION['user_name'];
         ====================================================== */
         .sidebar {
             width: 260px;
-            background-color: var(--primary-color);; /* Project main color */
+            background-color: var(--primary-color); /* Project main color */
             color: #fff;
             padding: 25px 0;
             display: flex;
@@ -109,7 +109,7 @@ $admin_name = $_SESSION['user_name'];
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 15px 25px;
             border-radius: 8px;
@@ -129,7 +129,7 @@ $admin_name = $_SESSION['user_name'];
         }
 
         .welcome h2 {
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
@@ -156,7 +156,7 @@ $admin_name = $_SESSION['user_name'];
         }
 
         .card h3 {
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
@@ -167,7 +167,7 @@ $admin_name = $_SESSION['user_name'];
 
         .card a {
             text-decoration: none;
-            background: var(--primary-color);;
+            background: var(--primary-color);
             color: #fff;
             padding: 10px 20px;
             border-radius: 6px;
@@ -186,7 +186,7 @@ $admin_name = $_SESSION['user_name'];
             text-align: center;
             margin-top: 40px;
             padding: 15px;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             border-radius: 8px;
             font-size: 14px;
@@ -252,7 +252,7 @@ $admin_name = $_SESSION['user_name'];
             <div class="card">
                <h3>Membership Payments</h3>
                <p>Track all member payments and renewals.</p>
-               <a href="payments_view.php" class="btn">View Payments</a>
+               <a href="payments.php" class="btn">View Payments</a>
             </div>
 
             <div class="card">

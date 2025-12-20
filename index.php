@@ -1,6 +1,7 @@
 <?php
 // Start session to handle user logins if needed
 session_start();
+include('./config/db_connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +59,6 @@ session_start();
         .logo {
             font-size: 26px; /* Larger font for logo */
             font-weight: 700; /* Bold logo text */
-            color: var(--primary-color);; /* Teal accent color */
         }
 
         .nav-links {
@@ -74,14 +74,13 @@ session_start();
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);; /* Teal hover effect */
         }
 
 /* ------------------------------
    HERO SECTION
 -------------------------------*/
 .hero {
-    background-color: var(--primary-color);; /* Solid teal background color */
+    background-color: var(--primary-color); /* Solid teal background color */
     height: 90vh; /* Full viewport height */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
@@ -107,7 +106,7 @@ session_start();
 
 .hero-content a {
     background-color: #fff; /* White button */
-    color: var(--primary-color);; /* Teal button text */
+    color: var(--primary-color); /* Teal button text */
     padding: 12px 30px; /* Button padding */
     border-radius: 30px; /* Rounded button corners */
     font-weight: 600; /* Bold button text */
@@ -144,7 +143,7 @@ session_start();
         }
 
         .feature-box h3 {
-            color: var(--primary-color);; /* Teal titles */
+            color: var(--primary-color); /* Teal titles */
             margin-bottom: 10px; /* Space below title */
         }
 

@@ -68,7 +68,7 @@ body {
    Header
 ------------------------------- */
 header {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -94,7 +94,7 @@ header {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -124,7 +124,7 @@ textarea {
 }
 
 button {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -152,7 +152,7 @@ table td {
 }
 
 table th {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -167,7 +167,7 @@ table tr:nth-child(even) {
     display: inline-block;
     margin-bottom: 15px;
     padding: 8px 15px;
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border-radius: 6px;
     text-decoration: none;

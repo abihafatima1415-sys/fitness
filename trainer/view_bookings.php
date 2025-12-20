@@ -57,7 +57,7 @@ $bookings = mysqli_query($conn, "
         }
         h2 {
             text-align: center;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 20px;
         }
         .message {
@@ -75,7 +75,7 @@ $bookings = mysqli_query($conn, "
             border-bottom: 1px solid #ccc;
         }
         th {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: white;
         }
         .status {
@@ -93,7 +93,7 @@ $bookings = mysqli_query($conn, "
             font-weight: 500;
             margin: 0 3px;
         }
-        .approve-btn { background-color: var(--primary-color);; }
+        .approve-btn { background-color: var(--primary-color); }
         .reject-btn { background-color: #e74c3c; }
         .approve-btn:hover { background-color: #019e8f; }
         .reject-btn:hover { background-color: #c0392b; }
@@ -101,7 +101,7 @@ $bookings = mysqli_query($conn, "
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             text-decoration: none;
         }
         a.back:hover { text-decoration: underline; }

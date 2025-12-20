@@ -69,7 +69,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -102,7 +102,7 @@ input[readonly] {
    Buttons
 ------------------------------- */
 button {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     padding: 12px;

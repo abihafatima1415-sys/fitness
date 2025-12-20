@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $query);
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $query);
 
         h2 {
             text-align: center;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 25px;
         }
 
@@ -85,7 +85,7 @@ $result = mysqli_query($conn, $query);
         }
 
         .add-trainer a {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 10px 20px;
             border-radius: 6px;
@@ -110,7 +110,7 @@ $result = mysqli_query($conn, $query);
         }
 
         table th {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
         }
 
@@ -128,7 +128,7 @@ $result = mysqli_query($conn, $query);
             margin: 2px;
         }
 
-        .edit-btn { background-color: var(--primary-color);; }
+        .edit-btn { background-color: var(--primary-color); }
         .delete-btn { background-color: #e74c3c; }
         .shift-btn { background-color: #3498db; }
 
@@ -144,7 +144,7 @@ $result = mysqli_query($conn, $query);
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 12px 0;

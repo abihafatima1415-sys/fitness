@@ -109,7 +109,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -130,7 +130,7 @@ table td {
 }
 
 table th {
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -154,7 +154,7 @@ select {
    Buttons
 ------------------------------- */
 button {
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 12px 18px;
@@ -189,7 +189,7 @@ button:hover {
    Links
 ------------------------------- */
 a {
-    color: var(--primary-color);;
+    color: var(--primary-color);
     text-decoration: none;
 }
 

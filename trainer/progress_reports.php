@@ -67,7 +67,7 @@ body {
    Header
 ------------------------------- */
 header {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -93,7 +93,7 @@ header {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 25px;
 }
 
@@ -114,7 +114,7 @@ table td {
 }
 
 table th {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -126,7 +126,7 @@ table tr:nth-child(even) {
    Buttons
 ------------------------------- */
 button {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -224,7 +224,7 @@ textarea {
 .back-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: #fff;
     border-radius: 6px;
     text-decoration: none;
@@ -244,7 +244,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 12px 0;

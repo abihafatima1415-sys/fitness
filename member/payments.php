@@ -67,7 +67,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 25px;
 }
 
@@ -105,7 +105,7 @@ table td {
 }
 
 table th {
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -117,7 +117,7 @@ table tr:nth-child(even) {
    Buttons
 ------------------------------- */
 button {
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -135,7 +135,7 @@ button:hover {
 ------------------------------- */
 a {
     text-decoration: none;
-    color: var(--primary-color);;
+    color: var(--primary-color);
 }
 
 a:hover {

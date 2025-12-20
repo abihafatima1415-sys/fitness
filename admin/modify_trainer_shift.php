@@ -76,7 +76,7 @@ if (isset($_POST['update_shift'])) {
         }
 
         header {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -96,7 +96,7 @@ if (isset($_POST['update_shift'])) {
 
         h2 {
             text-align: center;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 20px;
         }
 
@@ -116,7 +116,7 @@ if (isset($_POST['update_shift'])) {
         }
 
         button {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -166,7 +166,7 @@ if (isset($_POST['update_shift'])) {
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 12px 0;

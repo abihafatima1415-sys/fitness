@@ -51,7 +51,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -71,7 +71,7 @@ table td {
 }
 
 table th {
-    background-color: var(--primary-color);;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -96,7 +96,7 @@ table tr:nth-child(even) {
    Links
 ------------------------------- */
 a {
-    color: var(--primary-color);;
+    color: var(--primary-color);
     text-decoration: none;
 }
 

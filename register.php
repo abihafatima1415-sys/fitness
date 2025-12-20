@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         h2 {
             text-align: center;
-            color: var(--primary-color);;
+            color: var(--primary-color);
             margin-bottom: 25px;
         }
 
@@ -88,12 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         input:focus, select:focus {
-            border-color: var(--primary-color);;
+            border-color: var(--primary-color);
             outline: none;
         }
 
         button {
-            background-color: var(--primary-color);;
+            background-color: var(--primary-color);
             color: white;
             border: none;
             padding: 12px;
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         a {
-            color: var(--primary-color);;
+            color: var(--primary-color);
             text-decoration: none;
         }
 

@@ -93,7 +93,7 @@ body {
 ------------------------------- */
 h2 {
     text-align: center;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -137,7 +137,7 @@ textarea {
 }
 
 button {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -165,7 +165,7 @@ td {
 }
 
 th {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -205,7 +205,7 @@ a.back {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: var(--primary-color);;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
