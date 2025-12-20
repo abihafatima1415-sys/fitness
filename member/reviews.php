@@ -45,7 +45,7 @@ $reviews_result = mysqli_query($conn, $reviews_query);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><link rel="stylesheet" href="<?php echo $base_url;?>/css/site.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trainer Reviews | Member Panel</title>
 <style>

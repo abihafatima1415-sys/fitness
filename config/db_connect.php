@@ -5,6 +5,8 @@ $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $dbname = "fitness_system"; // Your database name
 
+$base_url = 'http://localhost/final';
+
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
