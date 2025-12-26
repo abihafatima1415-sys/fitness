@@ -6,3 +6,109 @@ header a {
   color: white;
   margin-right: 50px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bgcolor);
+    color: #333;
+}
+
+
+/* ------------------------------
+   Headings
+------------------------------- */
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* ------------------------------
+   Form Styles
+------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------- */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #019e8f;
+}
+
+/* ------------------------------
+   Paragraph & Links
+------------------------------- */
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.back-btn-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #019e8f;
+}

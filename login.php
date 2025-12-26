@@ -4,6 +4,21 @@ include('config/db_connect.php'); // Database connection
 
 
 $message = "";
+function generateCaptcha() {
+    return substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZ23456789"), 0, 6);
+}
+
+// Ensure CAPTCHA is always set
+if (!isset($_SESSION['login_captcha']) || empty($_SESSION['login_captcha'])) {
+    $_SESSION['login_captcha'] = generateCaptcha();
+}
+
+// Handle AJAX request for CAPTCHA refresh
+if (isset($_GET['action']) && $_GET['action'] === 'refresh_captcha') {
+    $_SESSION['login_captcha'] = generateCaptcha();
+    echo $_SESSION['login_captcha'];
+    exit;
+}
 
 // Redirect if already logged in
 if (isset($_SESSION['user_role'])) {
@@ -18,11 +33,26 @@ if (isset($_SESSION['user_role'])) {
         exit;
     }
 }
+function submit_form($conn){
+    $user_given_captcha_value = isset($_POST['captcha_input']) ? trim($_POST['captcha_input']): '';
+    
+    $user_identity = isset($_POST['email']) ? $_POST['email']: '';
+    $secret = isset($_POST['email']) ? $_POST['password']: '';
+    // Empty field check
+    if (empty($user_identity) || empty($secret)) {
+        $message = "<p style='color:red;'>All fields are required</p>";
+        $_SESSION['login_captcha'] = generateCaptcha();
+        return $message;
+    }
+    // CAPTCHA check
+    elseif ($user_given_captcha_value != $_SESSION['login_captcha']) {
+        $message = "<p style='color:red;'>Invalid CAPTCHA</p>";
+        $_SESSION['login_captcha'] = generateCaptcha();
+        return $message;
+    }
 
-// Handle login form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $email = mysqli_real_escape_string($conn, $user_identity);
+    $password = mysqli_real_escape_string($conn, $secret);
     if(!isset($_POST['role'])) {
          $_POST['role'] = 'Admin';
     }
@@ -36,8 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $table = "trainers";
     }
-
-    // Fetch user record
+      // Fetch user record
     $query = "SELECT * FROM $table WHERE email='$email' LIMIT 1";
     $result = mysqli_query($conn, $query);
 
@@ -63,146 +92,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         } else {
             $message = "<p style='color:red; text-align:center;'>Invalid Password!</p>";
+            return $message;
         }
     } else {
         $message = "<p style='color:red; text-align:center;'>No account found with this email!</p>";
+        return $message;
     }
+    return $message;
+}
+// Handle login form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $message=submit_form($conn);
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"><link rel="stylesheet" href="<?php echo $base_url;?>/css/site.css" />
+    <link rel="stylesheet" href="<?php echo $base_url;?>/css/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Fitness Management System</title>
-    <style>
-/* ------------------------------
-   Global Styles
-------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+    <script>
+        function refreshCaptcha() {
+            fetch("?action=refresh_captcha")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('captchaText').innerText = data;
+                });
+        }
+    </script>
 
-body {
-    background-color: var(--bgcolor);
-    color: #333;
-}
-
-/* ------------------------------
-   Container
-------------------------------- */
-.container {
-    width: 100%;
-    max-width: 450px;
-    background-color: #fff;
-    margin: 80px auto;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* ------------------------------
-   Headings
-------------------------------- */
-h2 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 25px;
-}
-
-/* ------------------------------
-   Form Styles
-------------------------------- */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-input,
-select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-    transition: border-color 0.3s;
-}
-
-input:focus,
-select:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-/* ------------------------------
-   Buttons
-------------------------------- */
-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #019e8f;
-}
-
-/* ------------------------------
-   Paragraph & Links
-------------------------------- */
-p {
-    text-align: center;
-    margin-top: 15px;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-/* ------------------------------
-   Back Button Styling
-------------------------------- */
-.back-btn-container {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.back-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-    background-color: #019e8f;
-}
-
-    </style>
 </head>
 <body>
     <div class="container">
@@ -222,6 +141,15 @@ a:hover {
                 <option value="Member">Member</option>
                 <option value="Trainer">Trainer</option>
             </select> -->
+
+            <!-- CAPTCHA -->
+            <div class="form-group captcha-box">
+                <span class="captcha-text" id="captchaText">
+                    <?php echo isset($_SESSION['login_captcha']) ? $_SESSION['login_captcha'] : generateCaptcha(); ?>
+                </span>
+                <input type="text" name="captcha_input" placeholder="Enter CAPTCHA" required>
+                <span style="cursor:pointer" class="reload" onclick="refreshCaptcha()">🔄</span>
+            </div>
 
             <button type="submit">Login</button>
         </form>
