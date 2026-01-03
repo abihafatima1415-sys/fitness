@@ -4,21 +4,6 @@ include('config/db_connect.php'); // Database connection
 
 
 $message = "";
-function generateCaptcha() {
-    return substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZ23456789"), 0, 6);
-}
-
-// Ensure CAPTCHA is always set
-if (!isset($_SESSION['login_captcha']) || empty($_SESSION['login_captcha'])) {
-    $_SESSION['login_captcha'] = generateCaptcha();
-}
-
-// Handle AJAX request for CAPTCHA refresh
-if (isset($_GET['action']) && $_GET['action'] === 'refresh_captcha') {
-    $_SESSION['login_captcha'] = generateCaptcha();
-    echo $_SESSION['login_captcha'];
-    exit;
-}
 
 // Redirect if already logged in
 if (isset($_SESSION['user_role'])) {
@@ -33,6 +18,22 @@ if (isset($_SESSION['user_role'])) {
         exit;
     }
 }
+
+function verifyCaptcha() {
+    if (!isset($_SESSION['login_captcha'])){
+        return 'Invalid session captcha</p>';
+    }
+    if(!isset($_POST['captcha_input'])) {
+        return 'Please provde captch value</p>';
+    }
+
+    $isValid = strcasecmp($_SESSION['login_captcha'], trim($_POST['captcha_input'])) === 0;
+    if($isValid) return 'ok';
+
+     $message = "Invalid CAPTCHA";
+    return $message;
+}
+
 function submit_form($conn){
     $user_given_captcha_value = isset($_POST['captcha_input']) ? trim($_POST['captcha_input']): '';
     
@@ -40,16 +41,12 @@ function submit_form($conn){
     $secret = isset($_POST['email']) ? $_POST['password']: '';
     // Empty field check
     if (empty($user_identity) || empty($secret)) {
-        $message = "<p style='color:red;'>All fields are required</p>";
+        $message = "All fields are required";
         $_SESSION['login_captcha'] = generateCaptcha();
         return $message;
     }
-    // CAPTCHA check
-    elseif ($user_given_captcha_value != $_SESSION['login_captcha']) {
-        $message = "<p style='color:red;'>Invalid CAPTCHA</p>";
-        $_SESSION['login_captcha'] = generateCaptcha();
-        return $message;
-    }
+    $message = verifyCaptcha();
+    if($message != 'ok') return $message;
 
     $email = mysqli_real_escape_string($conn, $user_identity);
     $password = mysqli_real_escape_string($conn, $secret);
@@ -91,19 +88,21 @@ function submit_form($conn){
             }
             exit;
         } else {
-            $message = "<p style='color:red; text-align:center;'>Invalid Password!</p>";
+            $message = "Invalid Password!";
             return $message;
         }
     } else {
-        $message = "<p style='color:red; text-align:center;'>No account found with this email!</p>";
+        $message = "No account found with this email!";
         return $message;
     }
     return $message;
 }
+
 // Handle login form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message=submit_form($conn);
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,11 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login | Fitness Management System</title>
     <script>
         function refreshCaptcha() {
-            fetch("?action=refresh_captcha")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('captchaText').innerText = data;
-                });
+            const img = document.getElementById('captcha_img');
+            img.src = 'captcha_image.php?ts=' + new Date().getTime();
         }
     </script>
 
@@ -126,7 +122,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <h2>Login</h2>
-        <?php echo $message; ?>
+       
+        "<p style='color:red; text-align:center;'><?php echo $message; ?></p>
         <form method="POST" action="">
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="Enter email" required>
@@ -134,19 +131,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter password" required>
 
-            <!-- <label for="role">Select Role:</label>
+            <label for="role">Select Role:</label>
             <select id="role" name="role" required>
                 <option value="">-- Choose Role --</option>
                 <option value="Admin">Admin</option>
                 <option value="Member">Member</option>
                 <option value="Trainer">Trainer</option>
-            </select> -->
+            </select>
 
             <!-- CAPTCHA -->
             <div class="form-group captcha-box">
-                <span class="captcha-text" id="captchaText">
-                    <?php echo isset($_SESSION['login_captcha']) ? $_SESSION['login_captcha'] : generateCaptcha(); ?>
-                </span>
+                <img id="captcha_img" src="captcha_image.php" alt="Captcha">
                 <input type="text" name="captcha_input" placeholder="Enter CAPTCHA" required>
                 <span style="cursor:pointer" class="reload" onclick="refreshCaptcha()">🔄</span>
             </div>

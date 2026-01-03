@@ -3,9 +3,9 @@
 $servername = "localhost";
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
-$dbname = "fitness_system"; // Your database name
+$dbname = "fitness_db"; // Your database name
 
-$base_url = 'http://localhost/final';
+$base_url = 'http://localhost/fitness';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
