@@ -150,7 +150,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="back-btn-container">
             <a href="index.php" class="back-btn">Back to Index</a>
         </div>
-        <script>refreshCaptcha();</script>
+        <script>
+        refreshCaptcha();
+        document.getElementById('role').value='<?php 
+        if(isset($_POST['role'])) echo $_POST['role']; 
+        else echo 'Admin'; ?>';
+        </script>
     </div>
 </body>
 </html>

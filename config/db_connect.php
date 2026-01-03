@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
-$dbname = "fitness_db"; // Your database name
+$dbname = "gym_system"; // Your database name
 
 $base_url = 'http://localhost/fitness';
 
