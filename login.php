@@ -20,18 +20,18 @@ if (isset($_SESSION['user_role'])) {
 }
 
 function verifyCaptcha() {
-    if (!isset($_SESSION['login_captcha'])){
-        return 'Invalid session captcha</p>';
+    if (!isset($_SESSION['login_captcha'])) {
+        return 'Captcha expired. Please refresh.';
     }
-    if(!isset($_POST['captcha_input'])) {
-        return 'Please provde captch value</p>';
+    if (!isset($_POST['captcha_input'])) {
+        return 'Please enter captcha';
     }
-
-    $isValid = strcasecmp($_SESSION['login_captcha'], trim($_POST['captcha_input'])) === 0;
-    if($isValid) return 'ok';
-
-     $message = "Invalid CAPTCHA";
-    return $message;
+    if (strcasecmp($_SESSION['login_captcha'], trim($_POST['captcha_input'])) !== 0) {
+        return 'Invalid CAPTCHA value given';
+    }
+    // Invalidate after success
+    unset($_SESSION['login_captcha']);
+    return 'ok';
 }
 
 function submit_form($conn){
@@ -42,7 +42,6 @@ function submit_form($conn){
     // Empty field check
     if (empty($user_identity) || empty($secret)) {
         $message = "All fields are required";
-        $_SESSION['login_captcha'] = generateCaptcha();
         return $message;
     }
     $message = verifyCaptcha();
@@ -113,8 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login | Fitness Management System</title>
     <script>
         function refreshCaptcha() {
-            const img = document.getElementById('captcha_img');
-            img.src = 'captcha_image.php?ts=' + new Date().getTime();
+            document.getElementById('captcha_image').src = 'captcha_image.php?ts=' + new Date().getTime();
         }
     </script>
 
@@ -133,7 +131,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <label for="role">Select Role:</label>
             <select id="role" name="role" required>
-                <option value="">-- Choose Role --</option>
                 <option value="Admin">Admin</option>
                 <option value="Member">Member</option>
                 <option value="Trainer">Trainer</option>
@@ -141,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- CAPTCHA -->
             <div class="form-group captcha-box">
-                <img id="captcha_img" src="captcha_image.php" alt="Captcha">
+                <img id="captcha_image" alt="Captcha">
                 <input type="text" name="captcha_input" placeholder="Enter CAPTCHA" required>
                 <span style="cursor:pointer" class="reload" onclick="refreshCaptcha()">🔄</span>
             </div>
@@ -149,11 +146,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Login</button>
         </form>
         <p>Don't have an account? <a href="register.php">Register as Member</a></p>
-<!-- Back to Index Button -->
-<div class="back-btn-container">
-    <a href="index.php" class="back-btn">Back to Index</a>
-</div>
-
+        <!-- Back to Index Button -->
+        <div class="back-btn-container">
+            <a href="index.php" class="back-btn">Back to Index</a>
+        </div>
+        <script>refreshCaptcha();</script>
     </div>
 </body>
 </html>
