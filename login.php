@@ -5,7 +5,10 @@ include('config/connection.php'); // Database connection
 
 $message = "";
 
-// Redirect if already logged in
+/* 
+Redirect if already logged in
+*/
+
 if (isset($_SESSION['user_role'])) {
     if ($_SESSION['user_role'] === "Admin") {
         header("Location: admin/dashboard.php");
@@ -33,6 +36,8 @@ function verifyCaptcha() {
     unset($_SESSION['login_captcha']);
     return 'ok';
 }
+
+
 
 function submit_form($conn){
     $user_given_captcha_value = isset($_POST['captcha_input']) ? trim($_POST['captcha_input']): '';

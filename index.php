@@ -1,14 +1,8 @@
-<?php
-// Start session to handle user logins if needed
-session_start();
-include('./config/connection.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Page title and meta information -->
-    <meta charset="UTF-8"><link rel="stylesheet" href="<?php echo $base_url;?>/css/site.css" />
+    <meta charset="UTF-8"><link rel="stylesheet" href="css/site.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Management System</title>
 
