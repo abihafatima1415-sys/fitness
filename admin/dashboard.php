@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Admin') {
 // --------------------------------------------
 // Include Database Connection
 // --------------------------------------------
-include('../config/db_connect.php');
+include('../config/connection.php');
 
 // Admin name from session
 $admin_name = $_SESSION['user_name'];

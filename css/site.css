@@ -1,6 +1,6 @@
 :root {
   --primary-color: #45456e; /* change this to your brand color */
-  --bgcolor: #d6d8d9;
+  --bgcolor: #cad3d6;
 }
 header a {
   color: white;
@@ -16,7 +16,7 @@ header a {
 
 body {
     background-color: var(--bgcolor);
-    color: #333;
+    color: #1b1010;
 }
 
 

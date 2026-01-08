@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../config/db_connect.php');
+include('../config/connection.php');
 
 // Ensure only logged-in members can access
 if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'Member') {

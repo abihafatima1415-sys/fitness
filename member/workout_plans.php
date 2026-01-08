@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Member') {
 // -----------------------------------------------------------
 // Include database connection
 // -----------------------------------------------------------
-include('../config/db_connect.php');
+include('../config/connection.php');
 
 // Get member ID from session
 $member_id = $_SESSION['user_id'];

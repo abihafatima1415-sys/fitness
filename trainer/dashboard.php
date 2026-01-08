@@ -3,7 +3,7 @@
 // Start session & verify trainer login
 // -----------------------------------------------------------
 session_start();
-include('../config/db_connect.php');
+include('../config/connection.php');
 
 if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Trainer') {
     header("Location: ../login.php");

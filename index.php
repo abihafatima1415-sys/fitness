@@ -1,7 +1,7 @@
 <?php
 // Start session to handle user logins if needed
 session_start();
-include('./config/db_connect.php');
+include('./config/connection.php');
 ?>
 
 <!DOCTYPE html>

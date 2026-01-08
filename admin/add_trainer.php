@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Admin') {
 // -----------------------------------------------------------
 // Include database connection
 // -----------------------------------------------------------
-include('../config/db_connect.php');
+include('../config/connection.php');
 
 // -----------------------------------------------------------
 // Initialize variables and handle form submission

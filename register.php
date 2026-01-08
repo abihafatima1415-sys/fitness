@@ -1,6 +1,6 @@
 <?php
 // Include database connection file
-include('config/db_connect.php');
+include('config/connection.php');
 
 // Initialize message variable for feedback
 $message = "";
